@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body{
+      background-color: #ff33ff;
+    }
+      .vijay
+      {
+        background-color: #3666ff;
+        border-radius: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 20px;
+        padding: 20px;
+        width:83%;
+        height: 100%;
+      }
+      h1
+      {
+        color: white;
+        padding-left: 50px;
+        font-size: 38px;
+      }
+      textarea
+      {
+        background-color: powderblue;
+        color: #ff007f;
+        width: 90%;
+        border-radius: 10px;
+        margin-left: 35px;
+        font-size: 28px;
+      }
+      input[type=submit]
+      {
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        box-shadow: 0 9px #999;
+        width: 80%;
+        border-radius: 10px;
+        margin-left: 100px;
+        font-size: 30px;
+        border: none;
+        /*color: #ff0000;*/
+        color: #fff;
+        background-color: #4CAF50;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+      }
+
+     input[type=submit]:hover
+     {
+       color:#99004c;
+       font-size: 31px;
+       background-color: #3e8e41;
+     }
+     input[type=submit]:active
+     {
+       background-color: #3e8e41;
+       box-shadow: 0 5px #666;
+       transform: translateY(4px);
+}
+    </style>
+  </head>
+  <body>
+    <div class="vijay">
+      <form class="" action="{% url 'add' %}" method="post">
+        {% csrf_token %}
+        <h1>Enter your text here:</h1>
+        {{form.text}}
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+
+  </body>
+</html>
